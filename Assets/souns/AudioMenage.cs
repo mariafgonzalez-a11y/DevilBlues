@@ -33,33 +33,15 @@ public class AudioMenage : MonoBehaviour
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
     }
 
+    public void PlayPointSound()
+    {
 
+        // Play sound point collect
+        audioSource.PlayOneShot(soundblow);
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 }
