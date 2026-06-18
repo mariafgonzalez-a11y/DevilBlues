@@ -55,25 +55,25 @@ public class IntroFade : MonoBehaviour
         // Texto aparece
         yield return Fade(textoGroup, 0f, 1f, tempoFadeInTexto);
 
-        // Texto fica na tela
+        //texto fica na tela
         yield return new WaitForSeconds(tempoMensagemNaTela);
 
-        // Texto some
+        // texto some
         yield return Fade(textoGroup, 1f, 0f, tempoFadeOutTexto);
 
         // Para os pontinhos
         animarPontinhos = false;
 
-        // Tela preta some
+        // tela preta some
         yield return Fade(fundoPretoGroup, 1f, 0f, tempoFadeOutFundo);
 
-        // Agora que a intro acabou, ativa o tutorial
+        // gora que a intro acabou, ativa o tutorial
         if (tutorialControls != null)
         {
             tutorialControls.SetActive(true);
         }
 
-        // Depois desativa a intro
+        // depois desativa a intro
         gameObject.SetActive(false);
     }
 
