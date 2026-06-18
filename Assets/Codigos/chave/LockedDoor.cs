@@ -19,6 +19,7 @@ public class LockedDoor : MonoBehaviour
     }
 
     private void Update()
+
     {
         // Smoothly rotate the door to its open target angle
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
@@ -28,7 +29,7 @@ public class LockedDoor : MonoBehaviour
     {
         if (isOpened) return;
 
-//Remover item do inventário após abrir porta
+        //Remover item do inventário após abrir porta
         PlayerInventory inventory = other.GetComponent<PlayerInventory>();
 
         if (inventory != null)
