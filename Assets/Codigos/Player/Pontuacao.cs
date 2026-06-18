@@ -10,7 +10,7 @@ public class Pontuacao : MonoBehaviour
     public void AdicionarPonto()
     {
         itensColetados++; 
-        textoNaTela.text = "Chaves: " + itensColetados; 
+        textoNaTela.text = "Chaves Infernal " + itensColetados; 
     }
 
     // NOVA FUNÇÃO: Tenta gastar uma chave para abrir algo
