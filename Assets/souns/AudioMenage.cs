@@ -35,7 +35,7 @@ public class AudioMenage : MonoBehaviour
 
     }
 
-    public void PlayPointSound()
+    public void     
     {
 
         // Play sound point collect
