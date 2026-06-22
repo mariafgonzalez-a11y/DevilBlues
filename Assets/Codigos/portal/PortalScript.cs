@@ -11,7 +11,7 @@ public class PortalScript : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            AudioMenage.instanceSound.PlayPointSound();
+            AudioMenage.instanceSound.soundportal();
             //SceneManager.LoadScene(nomeDaCenaDestino);
         }
     }

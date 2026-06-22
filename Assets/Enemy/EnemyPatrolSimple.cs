@@ -13,12 +13,17 @@ public class EnemyPatrolSimple : MonoBehaviour
     public float velocidadePerseguicao = 4f;
     public float distanciaParaTrocar = 0.5f;
 
-    [Header("Detecção")]
+    [Header("Detecï¿½ï¿½o")]
     public float distanciaParaPerseguir = 6f;
     public float distanciaParaDesistir = 10f;
 
     private int pontoAtual = 0;
     private bool perseguindo = false;
+
+    void Start()
+    {
+        AudioMenage.instanceSound.soundenemy();
+    }
 
     void Update()
     {
