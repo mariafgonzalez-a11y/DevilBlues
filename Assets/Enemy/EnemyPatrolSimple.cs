@@ -20,10 +20,6 @@ public class EnemyPatrolSimple : MonoBehaviour
     private int pontoAtual = 0;
     private bool perseguindo = false;
 
-    void Start()
-    {
-        AudioMenage.instanceSound.soundenemy();
-    }
 
     void Update()
     {
