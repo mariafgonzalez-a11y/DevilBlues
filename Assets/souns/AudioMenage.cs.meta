@@ -6,12 +6,12 @@ MonoImporter:
   defaultReferences:
   - audioSource: {instanceID: 0}
   - soundportal: {fileID: 8300000, guid: af8943a6e9ecf6a4988d92419da65911, type: 3}
-  - soundattack: {instanceID: 0}
-  - soundrun: {instanceID: 0}
-  - sounddeathPlayer: {instanceID: 0}
-  - soundenemy: {instanceID: 0}
-  - soundenviroment: {fileID: 8300000, guid: 4bb0b158e3ff5f24ba285521e51ad66d, type: 3}
-  - soundblow: {instanceID: 0}
+  - soundattack: {fileID: 8300000, guid: 4d1a438d6312aa3438d18396866c12c4, type: 3}
+  - soundrun: {fileID: 8300000, guid: ad378c8026d738343a00fe0a1348e2f1, type: 3}
+  - sounddeathPlayer: {fileID: 8300000, guid: f08375174bed147478b26f4ada8bbb85, type: 3}
+  - soundenemy: {fileID: 8300000, guid: 4bb0b158e3ff5f24ba285521e51ad66d, type: 3}
+  - soundenviroment: {fileID: 8300000, guid: 6c03feeae3817c54f99a9156c8469804, type: 3}
+  - soundblow: {fileID: 8300000, guid: 4232d7e9848c79047b32081e2aa803af, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

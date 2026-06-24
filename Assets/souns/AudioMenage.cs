@@ -41,12 +41,40 @@ public class AudioMenage : MonoBehaviour
 
        }
 
-public void PlayEnemy()
- {
- audioSource.PlayOneShot(soundenemy);
+         public void PlayEnemy()  
 
-}
+        {
+        audioSource.PlayOneShot(soundenemy);
 
+        }
 
+    public void PlayDeathPlayer()
+    {
+
+     audioSource.PlayOneShot(sounddeathPlayer);
+    }
+    
+    public void PlayAttack()
+    {
+       audioSource.PlayOneShot(soundattack);
+        
+    }
+      
+      public void PlayRun()
+      {
+           audioSource.PlayOneShot(soundrun);
+      }
+
+      public void PlayEnviroment()
+      {
+         audioSource.PlayOneShot(soundenviroment);
+
+     }
+
+    public void PlayBlow()
+    {
+
+       audioSource.PlayOneShot(soundblow);
+    }
 
 }
