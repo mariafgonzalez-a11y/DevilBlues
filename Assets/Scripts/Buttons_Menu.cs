@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 public class Buttons_Menu : MonoBehaviour
 {
     [SerializeField] private string nomeDoLevelDeJogo;
-    void Jogar()
+    public void Jogar()
     {
         SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
-    void SairJogo()
+    public void SairJogo()
     {
     Application.Quit();
     }
