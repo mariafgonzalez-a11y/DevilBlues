@@ -4,9 +4,9 @@ public class AudioMenage : MonoBehaviour
 {
     public static AudioMenage instanceSound;
 
-     public AudioSource audioSource;
-     public  AudioClip soundportal;
-     public AudioClip soundattack;
+    public AudioSource audioSource;
+    public  AudioClip soundportal;
+    public AudioClip soundattack;
     public AudioClip soundrun;
     public AudioClip sounddeathPlayer;
     public AudioClip soundenemy;
@@ -34,6 +34,18 @@ public class AudioMenage : MonoBehaviour
         }
 
     }
+
+       public void PlayPortal()
+       {
+             audioSource.PlayOneShot(soundportal);
+
+       }
+
+public void PlayEnemy()
+ {
+ audioSource.PlayOneShot(soundenemy);
+
+}
 
 
 

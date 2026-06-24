@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: df2e4b8affc2cf841b54883314b1918d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - soundportal: {fileID: 8300000, guid: af8943a6e9ecf6a4988d92419da65911, type: 3}
+  - soundattack: {instanceID: 0}
+  - soundrun: {instanceID: 0}
+  - sounddeathPlayer: {instanceID: 0}
+  - soundenemy: {instanceID: 0}
+  - soundenviroment: {fileID: 8300000, guid: 4bb0b158e3ff5f24ba285521e51ad66d, type: 3}
+  - soundblow: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
