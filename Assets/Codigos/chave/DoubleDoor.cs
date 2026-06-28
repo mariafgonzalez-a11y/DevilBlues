@@ -1,22 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// DoubleDoor.cs
-// Coloque este script num GameObject PAI vazio (ex: "DoubleDoor_Blue").
-// As duas folhas da porta devem ser filhos deste objeto.
-//
-// Hierarquia esperada:
-//   DoubleDoor_Blue          ← este script aqui
-//     ├─ DoorLeft            ← folha esquerda (pivô na borda esquerda)
-//     └─ DoorRight           ← folha direita  (pivô na borda direita)
-//
-// IMPORTANTE — Pivô das folhas:
-//   O pivô (origem) de cada folha deve estar na BORDA (dobradiça), não no centro.
-//   Se o seu modelo tem pivô no centro, corrija no Blender/Maya, ou use um
-//   GameObject vazio como pivô pai (veja comentário em "Corrigindo o pivô" abaixo).
-// ─────────────────────────────────────────────────────────────────────────────
-
 public class DoubleDoor : MonoBehaviour
 {
     [Header("Identificação")]
@@ -132,26 +116,23 @@ public class DoubleDoor : MonoBehaviour
     }
 
     // ─── Calcula se a porta deve empurrar para o lado do jogador ou oposto ───
-    float ComputeSign()
+ float ComputeSign()
+{
+    if (openDirection == OpenDirection.Fixed)
+        return 1f;
+
+    Vector3 toPlayer = _player.position - transform.position;
+    float   dot      = Vector3.Dot(transform.forward, toPlayer);
+    bool playerInFront = dot >= 0f;
+
+    return openDirection switch
     {
-        if (openDirection == OpenDirection.Fixed)
-            return 1f;
-
-        // Vetor do centro da porta até o jogador, projetado no eixo forward da porta
-        Vector3 toPlayer = _player.position - transform.position;
-        float   dot      = Vector3.Dot(transform.forward, toPlayer);
-
-        // dot > 0  → jogador está na frente da porta
-        // dot < 0  → jogador está atrás da porta
-        bool playerInFront = dot >= 0f;
-
-        return openDirection switch
-        {
-            OpenDirection.TowardsOutside => playerInFront ? -1f :  1f,  // empurra para longe
-            OpenDirection.TowardsInside  => playerInFront ?  1f : -1f,  // puxa para perto
-            _ => 1f
-        };
-    }
+        // INVERTIDO em relação à versão anterior
+        OpenDirection.TowardsOutside => playerInFront ?  1f : -1f,
+        OpenDirection.TowardsInside  => playerInFront ? -1f :  1f,
+        _ => 1f
+    };
+}
 
     void SetPrompts(bool unlock, bool locked)
     {
