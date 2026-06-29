@@ -1,16 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class Buttons_Menu : MonoBehaviour
+using UnityEngine.SceneManagement; // Obrigatório para carregar cenas
+
+public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private string nomeDoLevelDeJogo;
-    void Jogar()
+   
+    public void Jogar()
     {
-
-        SceneManager.LoadScene(Fase1);
-    }
-    void SairJogo()
-    {
-    Application.Quit();
+       
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   
     }
 
+  
+    public void SairDoJogo()
+    {
+        Debug.Log("O jogo foi fechado!"); 
+        Application.Quit(); 
+    }
 }
