@@ -6,7 +6,7 @@ public class Buttons_Menu : MonoBehaviour
     void Jogar()
     {
 
-        SceneManager.LoadScene(nomeDoLevelDeJogo);
+        SceneManager.LoadScene(Fase1);
     }
     void SairJogo()
     {
