@@ -113,6 +113,10 @@ public class DoubleDoor : MonoBehaviour
         _isAnimating = false;
 
         Debug.Log($"[DoubleDoor] Porta dupla aberta com a chave: {requiredKeyId}");
+
+        if(_isOpen == true)
+          Objetivo.Instance.Completar();
+    
     }
 
     // ─── Calcula se a porta deve empurrar para o lado do jogador ou oposto ───

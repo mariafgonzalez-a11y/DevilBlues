@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Adicione este script a um GameObject vazio chamado "GameManager" na cena.
-// Ele persiste durante toda a sessão e guarda as chaves coletadas.
+
 public class KeyInventory : MonoBehaviour
 {
     public static KeyInventory Instance { get; private set; }
@@ -25,6 +24,8 @@ public class KeyInventory : MonoBehaviour
     {
         if (_collectedKeys.Add(keyId))
             Debug.Log($"[KeyInventory] Chave coletada: {keyId}");
+
+            Objetivo.Instance.Completar();
     }
 
     /// <summary>Verifica se o jogador possui uma chave específica.</summary>

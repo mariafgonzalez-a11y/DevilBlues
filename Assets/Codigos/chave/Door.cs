@@ -89,6 +89,8 @@ public class Door : MonoBehaviour
         _isAnimating = false;
 
         Debug.Log($"[Door] Porta aberta com a chave: {requiredKeyId}");
+
+        Objetivo.Instance.Completar();
     }
 
     void SetPrompts(bool showUnlock, bool showLocked)
