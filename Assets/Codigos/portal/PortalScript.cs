@@ -56,21 +56,15 @@ public class PortalScript : MonoBehaviour
         rtTexto.offsetMax = Vector2.zero;
 
         // Fade in
+ // Fade in
         float timer = 0f;
         while (timer < 1f)
         {
-<<<<<<< HEAD
-            
-            
-            
-            //SceneManager.LoadScene(nomeDaCenaDestino);
-=======
             timer += Time.deltaTime * velocidadeFade;
             float alpha = Mathf.Clamp01(timer);
             fundo.color  = new Color(0f, 0f, 0f, alpha);
             texto.color  = new Color(1f, 1f, 1f, alpha);
             yield return null;
->>>>>>> fafa
         }
 
         // Carrega a cena
