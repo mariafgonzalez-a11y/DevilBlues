@@ -4,7 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
+<<<<<<< HEAD
   - Enemy
+=======
+  - Coletavel
+  - Chave Coletavel
+  - chave Coletavel fundos
+>>>>>>> fafa
   layers:
   - Default
   - TransparentFX

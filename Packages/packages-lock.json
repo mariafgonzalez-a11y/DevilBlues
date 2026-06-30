@@ -305,7 +305,11 @@
     },
     "com.unity.modules.physicscore2d": {
       "version": "1.0.0",
+<<<<<<< HEAD
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> fafa
       "source": "builtin",
       "dependencies": {}
     },
